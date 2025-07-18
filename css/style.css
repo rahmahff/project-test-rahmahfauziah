@@ -1,0 +1,204 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FF6600; 
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 1030; 
+    box-shadow: 0 2px 5px #afadad; 
+}
+
+.header.scrolled {
+    background-color: #FF6600CC; 
+}
+
+.header.hidden {
+    top: -70px; 
+}
+
+.header .navbar-logo img {
+    height: 40px;
+    width: auto; 
+}
+
+.header .navbar-nav .nav-link {
+    color: #fff; 
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem; 
+    position: relative; 
+}
+
+.header .navbar-nav .nav-link.active {
+    background-color: transparent; 
+    color: #fff; 
+}
+
+.header .navbar-nav .nav-link.active::after {
+    content: ''; 
+    position: absolute;
+    left: 50%;
+    bottom: 5px; 
+    transform: translateX(-50%); 
+    width: 30px; 
+    height: 2px; 
+    background-color: #fff; 
+    border-radius: 1px; 
+}
+
+/* Banner Section */
+.hero-section {
+    position: relative;
+    height: 400px; 
+    overflow: hidden; 
+    background-color: #fff; 
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; 
+    background-image: url('https://i.pinimg.com/1200x/80/fd/fd/80fdfd7c349b1ffff8cb49cc034fa0b0.jpg');
+    background-size: cover; 
+    background-position: center; 
+    transition: transform 0.1s ease-out; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3D3D3D4D 0%, #46454599 100%); 
+    z-index: 1; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    color: #fff; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.hero-section::after {
+    content: ''; 
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: #fff; 
+    transform: skewY(-2deg); 
+    transform-origin: bottom right; 
+    z-index: 3; 
+}
+
+/* Post Card Article */
+.card-article {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #afadad; 
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.card-article:hover {
+    transform: translateY(-5px); 
+}
+
+.card-article-img-top {
+    width: 100%;
+    height: 100px; 
+    object-fit: cover; 
+    border-top-left-radius: 0.5rem; 
+    border-top-right-radius: 0.5rem; 
+}
+
+.card-article .card-body {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-article .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 0.5rem;
+}
+
+.card-article .card-text {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: auto; 
+}
+
+/* Filter Select */
+.form-select {
+    border-radius: 2rem; 
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+}
+
+/* Pagination */
+.pagination .page-item .page-link {
+    border-radius: 0.5rem; 
+    margin: 0 4px; 
+    color: #333; 
+    border: none; 
+    background-color: transparent; 
+    padding: 0.5rem 0.8rem; 
+    min-width: 40px; 
+    text-align: center;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FF6600; 
+    color: #fff; 
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #a8a7a7; 
+    pointer-events: none;
+    background-color: transparent; 
+    border: none; 
+}
+
+/* Spinner Container */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; 
+}
